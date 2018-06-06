@@ -1,6 +1,11 @@
 \documentclass[12pt,a4paper]{article}
+\usepackage{titletoc}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
+\addto\captionsfrench{
+	\renewcommand{\refname}{Sources}
+	\renewcommand{\contentsname}{Sommaire}
+}
 \usepackage[left=2cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
@@ -8,6 +13,7 @@
 \usepackage{glossaries}
 \makeglossaries
 \input{glossaire/entries}
+
 \setstretch{1.25}
 \setlength{\parindent}{0pt}
 
@@ -16,12 +22,20 @@
 \input{fichetechnique/fichetechnique}
 \input{remerciements/remerciements}
 
-\newpage
-\tableofcontents
+\input{sommaire/sommaire}
 
 \input{introduction/introduction}
+\input{partie1/partie1}
+\input{partie2/partie2}
+\input{partie3/partie3}
+\input{conclusion/conclusion}
 
 \input{glossaire/glossaire}
+\input{references/figure}
+\input{references/tableaux}
+\input{sources/sources}
 
+\input{annexes/annexes}
+\input{couverture/couverture}
 
 \end{document}
