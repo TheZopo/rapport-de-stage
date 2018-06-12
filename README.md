@@ -7,7 +7,7 @@ Il s'agit de mon rapport de stage de fin de cursus de DUT Informatique à l'IUT 
 Dans ce rapport de stage vous découvrirez le Laboratoire de l'Informatique du Parallélisme en tant qu'organisation, les différentes étapes du projet : de la phase de découverte du sujet et de conception d'une bibliographie à la phase de développement, mais également mon ressenti sur cette expérience dans le monde de la recherche et ce que j'ai découvert techniquement et humainement.
 
 ## Mots clefs
-informatique, green IT, datacenter, recherche, environement, énergie, simulation, économie, urbanisme
+informatique, green IT, datacenter, recherche, environnement, énergie, simulation, économie, urbanisme
 
 ## Contributeurs
 |Fonction|Nom|
@@ -15,3 +15,6 @@ informatique, green IT, datacenter, recherche, environement, énergie, simulatio
 |Auteur|Bastien Marsaud|
 |Maître de Stage|Laurent Lefèvre, chercheur à l'INRIA, membre de l'équipe AVALON au LIP|
 |Responsable pédagogique|Hamamache Kheddoucci, enseignant-chercheur à l'IUT Lyon 1|
+
+## Licence
+Creative Commons BY-NC-ND 4.0
