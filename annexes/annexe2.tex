@@ -1,3 +1,161 @@
-\section{Deuxième annexe}
-\subsection{Sous section de la deuxième annexe}
-\subsection{Deuxième Sous section de la deuxième annexe}
+\part*{Annexe B}
+\section{Calcul de l'énergie perdue dans les lignes HTA}
+\label{appendix:aclosses}
+\subsection{L'effet de peau}
+L'effet de peau est un phénomène électromagnétique faisant qu'a haute fréquence, le courant est transmis dans la section du conducteur la plus proche de la surface. La densité du courant décroît exponentiellement à mesure que l'on s'éloigne de la périphérie du conducteur ce qui entraine une augmentation de la résistance de ce dernier et donc des pertes d'énergie.\\
+
+La quantité d'énergie perdu est définie par la formule suivante :
+
+\[P_{peau}=(1 - exp(\frac{-dR_l}{Lc})) \times P_{nominale} \]
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline 
+		Paramètre & Définition et unité \\
+		\hline
+		$P_{peau}$ & Énergie perdue par effet de peau \\ 
+		& (kW) \\
+		\hline
+		$d$ & Longueur du câble \\
+		& (m) \\	
+		\hline	
+		$R_l$ & Résistivité du câble \\
+		& (\SI[per-mode = symbol]{}{\ohm\per\m}) \\
+		\hline
+		$L$ & Inductance par mètre \\
+		& (\SI[per-mode = symbol]{}{\henry\per\m}) \\
+		\hline
+		$c$ & Célérité de la lumière dans le vide \\ 
+		& (\SI[per-mode = symbol]{3e8}{\m\per\s}) \\
+		\hline
+		$P_{nominale}$ & La puissance nominale de la ligne \\ 
+		& (kW) \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{La résistivité du câble}
+La résistivité du câble représente sa capacité à s'opposer à la circulation du courant électrique. Cela correspond à la résistance d'un tronçon du matériaux conducteur du câble d'un mètre de longueur et d'un mètre carré de section \cite{Resistivite}.\\
+
+Elle est définie par la formule suivante :
+
+\[R_l=\frac{I_B}{2\pi a \sigma \delta}\]
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline 
+		Paramètre & Définition et unité \\
+		\hline
+		$R_l$ & Résistance par unité de longueur \\
+		& (\SI[per-mode = symbol]{}{\ohm\per\m}) \\
+		\hline
+		$I_B$ & Coefficient de correction de Bessel \\
+		& (1,1) \\
+		\hline
+		$a$ & Rayon du câble \\
+		& (\SI{}{\m}) \\
+		\hline
+		$\sigma$ & Conductivité du métal \\
+		& (\SI[per-mode = symbol]{}{\siemens\per\m}) \\
+		\hline
+		$\delta$ & Épaisseur de peau du câble \\
+		& (m) \\	
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{L'épaisseur de peau du câble}
+L'épaisseur de peau du câble détermine la largeur de la zone où se concentre le courant dans le câble.
+
+Elle est définie par la formule suivante :
+
+\[\delta=\frac{1}{\sqrt{\pi f \mu_0\sigma}}\]
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline 
+		Paramètre & Définition et unité \\
+		\hline
+		$\delta$ & Épaisseur de peau du câble \\
+		& (m) \\
+		\hline
+		$f$ & Fréquence du courant \\
+		& (\SI{}{\hertz}) \\
+		\hline
+		$\mu_0$ & Perméabilité magnétique du vide \\ 
+		& (\SI[per-mode = symbol]{4\pi e-7}{\henry\per\m}) \\
+		\hline
+		$\sigma$ & Conductivité du métal \\
+		& (\SI[per-mode = symbol]{}{\siemens\per\m}) \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{L'inductance par unité de longueur}
+L'inductance est la quantification de l'énergie électromagnétique qui apparait lorsque le courant parcourt le câble.\\
+
+Elle est définie par la formule suivante :
+
+\[L=\frac{\pi}{\mu}\ln(\frac{d}{a})\]
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline 
+		Paramètre & Définition et unité \\
+		\hline
+		$L$ & Inductance par mètre \\
+		& (\SI[per-mode = symbol]{}{\henry\per\m}) \\
+		\hline
+		$\mu$ & Perméabilité magnétique ambiant ($\approx \mu_0$) \\
+		& (\SI[per-mode = symbol]{}{\henry\per\m}) \\
+		\hline
+		$d$ & Espace entre deux lignes (\emph{A vérifier}) \\ 
+		& (\SI{}{\m}) \\
+		\hline
+		$a$ & Rayon du câble \\
+		& (\SI{}{\m}) \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{L'effet corona}
+L'effet corona est dû à l'ionisation des molécules d'air le long des lignes électriques. Une partie de l'énergie est dissipée dans l'air. Cet effet varie selon les conditions métrologiques.\\
+
+La quantité d'énergie perdu par effet corona est définie par la formule suivante :
+
+\[P_{corona}=\frac{k_0}{k_d}(f + 25)\sqrt{\frac{a}{d}}[V_0 - g_0k_iak_d\ln(\frac{d}{a})]^2 \times 10^{-5} \times l\]
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline 
+		Paramètre & Définition et unité \\
+		\hline
+		$k_0$ & Constante \\
+		& (241) \\
+		\hline
+		$k_d$ & Densité de l'air \\
+		& (\SI[per-mode = symbol]{}{\hecto\pascal}) \\
+		\hline
+		$f$ & Fréquence \\ 
+		& (\SI{}{\hertz}) \\
+		\hline
+		$a$ & Rayon du câble \\
+		& (\SI{}{\cm}) \\
+		\hline
+		$d$ & Espace entre deux lignes (\emph{A vérifier}) \\
+		& (\SI{}{\cm}) \\
+		\hline
+		$V_0$ & Tension phase neutre \\
+		& ($Tension\ ligne\ ligne/1.73\ \SI{}{\kilo\volt}$) \\
+		\hline
+		$g_0$ & Rigidité diélectrique de l'air \\
+		& (\SI[per-mode = symbol]{21}{\kilo\volt\per\cm}) \\
+		\hline
+		$k_i$ & Facteur de correction du câble \\
+		& (\emph{Se référer aux tables constructeur}) \\
+		\hline
+		$l$ & Longueur du câble \\
+		& (km) \\
+		\hline
+	\end{tabular}
+\end{center}

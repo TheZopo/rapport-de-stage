@@ -1,3 +1,22 @@
-\section{Première annexe}
-\subsection{Sous section de la première annexe}
-\subsection{Deuxième Sous section de la première annexe}
+\part*{Annexe A}
+\section{Calcul du KPI Energy Consumption ($KPI_{EC}$)}
+\label{appendix:kpiec}
+Le $KPI_{EC}$ est définie par la formule suivante que nous allons détailler :
+\[KPI_{EC} = EC_{SP} + EC_{FEN} + EC_{REN} + (EC_{TH} \times K_{TH})\]
+
+\subsection{Consommation électrique du réseau ($EC_{SP}$)}
+Il s'agit de la quantité d'énergie obtenue depuis le réseau électrique et qui est relevée sur les compteurs du fournisseur d'énergie.
+Cette valeur prend également en compte l'énergie issue d'une boucle interne de distribution d'électricité et les pertes dans les transformateurs.
+
+\subsection{Consommation électrique d'énergie fossile ($EC_{FEN}$)}
+Il s'agit de la quantité d'énergie produite localement à partir de sources d'énergie fossile, comme par exemple des groupes électrogènes. Elle est mesurée à la sortie de la source d'énergie si elle est dédiée au data-centre ou à l'entrée de ce dernier si la source est partagée avec d'autres sites.
+
+\subsection{Consommation électrique d'énergies renouvelables ($EC_{REN}$)}
+Il s'agit de la quantité d'énergie produite localement à partir de sources renouvelables. Le mode de mesure est le même que pour l'$EC_{FEN}$.
+
+\subsection{Consommation d'énergie thermique ($EC_{TH}$)}
+Il s'agit de la quantité d'énergie thermique livrée, quelle soit chaude ou froide. On la mesure à l'entrée du data-centre via un compteur de calories.
+
+\subsection{Facteur de conversion d'énergie thermique ver électrique ($K_{TH}$)}
+Il s'agit du facteur de conversion s'il est connu et certifié, si ce n'est pas le cas on utilisera la valeur par défaut $0,43$ qui correspond à une installation de référence.
+\newpage
