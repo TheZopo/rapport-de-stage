@@ -1,5 +1,5 @@
 \subsection{La recherche bibliographique}
-Avant d'espérer pouvoir commencer le développement de l'outils, mon maître de stage, Laurent Lefèvre, m'a conseillé de commencer par une grande recherche bibliographique afin d'intégrer les problématiques de Green IT et plus particulièrement de chercher des indicateurs qui pourraient nous intéresser pour mesurer l'empreinte environnementale des centres de données. Je me suis tout d'abord intéresser aux indicateurs fournis par l'organisme GreenGrid qui fut le premier à fournir ce genre d'indicateur de Green IT pour les centres de données.\\
+Avant d'espérer pouvoir commencer le développement de l'outils, mon maître de stage, Laurent Lefèvre, m'a conseillé de commencer par une grande recherche bibliographique afin d'intégrer les problématiques de Green IT et plus particulièrement de chercher des indicateurs qui pourraient nous intéresser pour mesurer l'empreinte environnementale des centres de données. Je me suis tout d'abord intéressé aux indicateurs fournis par l'organisme GreenGrid qui fut le premier à fournir ce genre d'indicateur de Green IT pour les centres de données.\\
 
 Dans cette partie nous présenterons et critiquerons l'ensemble des indicateurs que j'ai retenu pour les intégrer dans le simulateur.
 
@@ -22,7 +22,7 @@ Le PUE s'est imposé durant les dernières années comme norme afin de comparer 
 \newpage
 Cependant, il ne faudrait pas lui donner des propriétés qu'il ne possède pas. Malgré la tendance actuelle accommodée au green-washing, le PUE n'est pas très bien choisi pour comparer des data-centres entre eux. Des éléments manquent pour une comparaison juste et efficace : localisation géographique, taux de disponibilité ou taux de charge \cite{badPUEOtherMetrics}. De plus, le mode de calcul possède un biais : baisser la quantité d'énergie utilisée par l'équipement informatique, même si c'est pour une meilleur gestion de l'énergie fait augmenter le PUE. La virtualisation par exemple fait augmenter le PUE alors qu'elle offre une puissance de calcul par unité d'énergie plus importante \cite{badPUEVirtualisation}. Le même raisonnement peut être appliqué à la gestion de la charge, qui, en éteignant certains équipements informatiques, fait augmenter le PUE \cite{badPUECharge}.\\
 
-Cependant, s'il on prend le PUE comme il est, c'est à dire un indicateur qui montre la proportion d'énergie utilisé par l'architecture du centre de données par rapport à la consommation de l'équipement informatique et non pas un fer-de-lance de l'éco-conception des centres de données il reste pertinent pour notre simulateur.
+Cependant, si on prend le PUE comme il est, c'est à dire un indicateur qui montre la proportion d'énergie utilisée par l'architecture du centre de données par rapport à la consommation de l'équipement informatique et non pas un fer-de-lance de l'éco-conception des centres de données il reste pertinent pour notre simulateur. Il est donné par la formule suivante :
 
 \subsubsection{Carbon Usage Effectiveness (CUE)}
 Cet indicateur est le deuxième indicateur de la famille xUE de l'organisme GreenGrid et aspire à devenir un standard dans l'industrie pour comparer les data-centres sur leurs rejets de dioxyde de carbone comme l'a été le PUE pour l'efficacité énergétique.
@@ -40,11 +40,11 @@ Le DCeP représente l'énergie nécessaire pour une opération. L'unité du \gls
 Grâce à cet indicateur on peut également évaluer la quantité de gaz à effet de serre rejetée dans l'atmosphère par unité de \gls{travailutile} en utilisant le facteur d'émission de dioxyde de carbone par kWh du centre de données ($CEF$).
 \[CEF \times DCeP\]
 
-Pour notre simulateur cet indicateur est difficile à exploiter car il est très difficile d'estimer la valeur du travail utile car c'est extrêmement spécifique. Cependant, il serait cependant dommage de ne pas donner la possibilité à l'utilisateur de le calculer si il en connait les détails.
+Pour notre simulateur cet indicateur est difficile à exploiter car il est très difficile d'estimer la valeur du travail utile car c'est extrêmement spécifique. Cependant, il serait dommage de ne pas donner la possibilité à l'utilisateur de le calculer si il en connait les détails.
 
 \subsubsection{Green Energy Coefficient (GEC)}
 \[GEC=\frac{Consommation\ \acute{e}nergie\ verte}{Consommation\ totale\ d'\acute{e}nergie}\]\\
-Le GEC quantifie la part d'énergie renouvelable consommée par le data-centre. Ce coefficient permet de nuancer l'impact carbone du data-centre s'il utilise des énergies renouvelables.
+Le GEC quantifie la part d'énergie renouvelable consommée par le data-centre. Ce coefficient permet de nuancer l'impact carbone du data-centre si il utilise des énergies renouvelables.
 La consommation d'énergie verte ne correspond pas à la part d'énergie renouvelable injectée dans le réseau électrique du fournisseur d'énergie, la data-centre doit posséder, ou posséder les droits d'utilisation, de cette source d'énergie.
 
 \subsubsection{Energy Reuse Factor (ERF)}
